@@ -6,7 +6,8 @@
     "steps": [
       {
           "title": "Aporeto Kubernetes Playground",
-          "text": "step1.md"
+          "text": "step1.md",
+          "code": "init.sh"
       }
     ],
     "assets": {
@@ -25,6 +26,6 @@
     "uilayout": "terminal-terminal"
   },
   "backend": {
-    "imageid": "kubernetes"
+    "imageid": "kubernetes-cluster"
   }
 }
