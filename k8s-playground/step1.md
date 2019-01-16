@@ -1,3 +1,7 @@
 # Aporeto Kubernetes Playground
 
-Have fun
+## Start the kubernetes cluster
+
+```bash
+launch.sh
+```{{execute}}
