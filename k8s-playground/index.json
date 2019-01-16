@@ -9,14 +9,14 @@
       }
     ],
     "assets": {
-      "host01": [
+      "client": [
           {
             "file": "apoctl",
             "target": "/usr/local/bin/",
             "chmod": "+x"
           }
       ]
-  }
+    }
   },
   "environment": {
     "hideintro": true,
