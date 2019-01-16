@@ -1,11 +1,10 @@
 {
-  "noindex": true,
   "title": "Aporeto Kubernetes Playground",
   "description": "Play with Aporeto on Kubernetes",
   "details": {
     "steps": [
       {
-          "title": "Aporeto Kubernetes Playground",
+          "title": "Step 1",
           "text": "step1.md",
           "courseData": "init.sh"
       }
