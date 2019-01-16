@@ -1,4 +1,5 @@
 {
+  "noindex": true,
   "title": "Aporeto Kubernetes Playground",
   "description": "Play with Aporeto on Kubernetes",
   "details": {
@@ -9,7 +10,7 @@
       }
     ],
     "assets": {
-      "client": [
+      "master": [
           {
             "file": "apoctl",
             "target": "/usr/local/bin/",
