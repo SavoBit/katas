@@ -6,11 +6,11 @@
       {
           "title": "Step 1",
           "text": "step1.md",
-          "code": "foreground.sh"
+          "courseData": "foreground.sh"
       }
     ],
     "assets": {
-      "client": [
+      "master": [
           {
             "file": "apoctl",
             "target": "/usr/local/bin/",
