@@ -19,7 +19,7 @@
     "intro": {
       "text": "intro.md",
       "assets": {
-        "client": [
+        "host01": [
           {
             "file": "apoctl",
             "target": "/usr/bin"
