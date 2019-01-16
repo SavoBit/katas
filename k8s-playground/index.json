@@ -10,7 +10,7 @@
       }
     ],
     "assets": {
-      "master": [
+      "client": [
           {
             "file": "apoctl",
             "target": "/usr/local/bin/",
@@ -22,7 +22,7 @@
   "environment": {
     "hideintro": true,
     "hidefinish": true,
-    "uilayout": "terminal"
+    "uilayout": "terminal-terminal"
   },
   "backend": {
     "imageid": "kubernetes"
