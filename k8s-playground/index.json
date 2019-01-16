@@ -1,0 +1,23 @@
+{
+  "title": "Aporeto Kubernetes Playground",
+  "description": "Play with Aporeto on Kubernetes",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "assets": {
+        "host01": [
+          {
+            "file": "apoctl",
+            "target": "/usr/bin"
+          }
+        ]
+      }
+    }
+  },
+  "environment": {
+    "uilayout": "terminal-terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster"
+  }
+}
