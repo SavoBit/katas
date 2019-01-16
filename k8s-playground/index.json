@@ -10,13 +10,20 @@
       }
     ],
     "assets": {
-      "master": [
+      "client": [
           {
             "file": "apoctl",
             "target": "/usr/local/bin/",
             "chmod": "+x"
           }
-      ]
+      ],
+      "host01": [
+        {
+          "file": "apoctl",
+          "target": "/usr/local/bin/",
+          "chmod": "+x"
+        }
+    ]
     }
   },
   "environment": {
