@@ -2,6 +2,4 @@
 
 ## Start the kubernetes cluster
 
-```bash
-launch.sh
-```{{execute}}
+Run ```launch.sh```{{execute}}
