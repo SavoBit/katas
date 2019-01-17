@@ -7,7 +7,7 @@
     },
     "steps": [
       {
-          "title": "Setup",
+          "title": "Katacoda Setup",
           "text": "_setup.md"
       },
       {

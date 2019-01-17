@@ -5,9 +5,13 @@
     },
     "steps": [
       {
-          "title": "Aporeto Kubernetes Playground",
+          "title": "Setup Katacoda",
           "text": "_setup.md"
-      }
+      },
+      {
+        "title": "Aporeto Kubernetes Playground",
+        "text": "_setup.md"
+    }
     ],
     "assets": {
       "host01": [

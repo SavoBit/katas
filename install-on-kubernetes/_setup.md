@@ -10,17 +10,3 @@ First and foremost, please configure your account
 name for this training session by clicking on:
 
 `/opt/common-setup.sh && source ~/.aporeto`{{execute}}
-
-# Useful commands
-
-To check workloads status:
-
-```kubectl -n kube-system get pods```{{execute}}
-
-To check enforcerd logs:
-
-```kubectl logs -n kube-system -l app=enforcerd```{{execute}}
-
-To check aporeto-operator logs:
-
-```kubectl logs -n kube-system -l app=aporeto-operator```{{execute}}
