@@ -14,7 +14,7 @@ chmod +x /usr/local/bin/apoctl
 helm init
 
 mkdir -p ~/.helm/repository/local/
-gunzip /tmp/helm-repo.zip
+tar -xzvf /tmp/helm-repo.tgz
 mv repo/* ~/.helm/repository/local/
 
 pkill helm && helm serve &
