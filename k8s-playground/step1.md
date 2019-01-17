@@ -2,6 +2,6 @@
 
 ## Setup your namespace
 
-```shell
-export APOCTL_API_NAMESPACE=/yourns
-```{{copy}}
+To configure your namespace, use the command:
+
+`export APOCTL_NAMESPACE=/yourns`{{copy}}
