@@ -26,7 +26,6 @@ create_ns_if_needed () {
     local ns; ns="$2"
 
     if [[ "$(apoctl api count ns -n "$parent" --filter "name == $parent/$ns")" == "0" ]]; then
-        echo "* creating namespace $parent/$ns"
         apoctl api create ns -n "$parent" -k name "$ns" || exit 1
     fi
 }
@@ -46,16 +45,15 @@ echo
 
 ## create namespace
 session_namespace="/$APORETO_ACCOUNT/$KATACODA_NS_PREFIX/$KATACODA_SESSION_ID"
+echo "> Creating session namespaces..."
 create_ns_if_needed "/$APORETO_ACCOUNT" "$KATACODA_NS_PREFIX"
 sleep 1
 create_ns_if_needed "/$APORETO_ACCOUNT/$KATACODA_NS_PREFIX" "$KATACODA_SESSION_ID"
 
 echo
-echo "Katacoda session is ready."
+echo "Katacoda session is ready. The namespace for this session is :"
 echo
-echo "This session namespace is :"
-echo
-echo "$session_namespace"
+echo "  $session_namespace"
 echo
 echo "apoctl is pointing to this namespace and UI url is:"
 echo
