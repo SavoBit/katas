@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo "toto" > /opt/hello
 launch.sh &
 pid="$!"
 
