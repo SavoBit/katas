@@ -1,3 +1,5 @@
+<!-- do not edit outside of /common-->
+
 > You must have an Aporeto account.
 > If you don't have one, visit <https://console.aporeto.com/register>.
 >
