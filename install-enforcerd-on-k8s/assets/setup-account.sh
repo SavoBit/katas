@@ -34,24 +34,25 @@ create_ns_if_needed () {
 ## user input
 echo "Aporeto Katacoda Session Configuration"
 echo
-echo "Please enter your information:"
+echo "This script configures the Katacoda environment"
+echo "to make it point to a temporay namespace in"
+echo "your Aporeto account."
 echo
-
+echo "Please enter your credentials:"
+echo
 prompt APORETO_ACCOUNT  "Aporeto account name"
 eval "$(apoctl auth aporeto --account "$APORETO_ACCOUNT" --validity 1h -e)"
-
 echo
 
 ## create namespace
 session_namespace="/$APORETO_ACCOUNT/$KATACODA_NS_PREFIX/$KATACODA_SESSION_ID"
-
 create_ns_if_needed "/$APORETO_ACCOUNT" "$KATACODA_NS_PREFIX"
 sleep 1
 create_ns_if_needed "/$APORETO_ACCOUNT/$KATACODA_NS_PREFIX" "$KATACODA_SESSION_ID"
 
 echo
-
-echo "Katacoda session namespace is ready."
+echo "Katacoda session is ready."
+echo
 echo "This session namespace is :"
 echo
 echo "$session_namespace"
