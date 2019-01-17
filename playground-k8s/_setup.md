@@ -2,25 +2,10 @@
 > If you don't have one, visit <https://console.aporeto.com/register>.
 >
 > You should be familiar with the [basic concepts](https://docs.console.aporeto.com)
-> of Aporeto to understand what you'll be doing.
+> of Aporeto to understand what you'll be doing.s
 
-# Setup playground
-
-First and foremost, please configure your account
-name for this training session by clicking on:
+**Important:** You must setup the environment by running:
 
 `/opt/common-setup.sh && source ~/.aporeto`{{execute}}
 
-# Useful commands
-
-To check workloads status:
-
-```kubectl -n kube-system get pods```{{execute}}
-
-To check enforcerd logs:
-
-```kubectl logs -n kube-system -l app=enforcerd```{{execute}}
-
-To check aporeto-operator logs:
-
-```kubectl logs -n kube-system -l app=aporeto-operator```{{execute}}
+Then click continue to get started.

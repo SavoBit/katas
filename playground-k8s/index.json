@@ -11,7 +11,7 @@
       {
         "title": "Aporeto Kubernetes Playground",
         "text": "step1.md"
-    }
+      }
     ],
     "assets": {
       "host01": [
