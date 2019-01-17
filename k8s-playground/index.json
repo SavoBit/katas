@@ -6,9 +6,18 @@
       {
           "title": "Step 1",
           "text": "step1.md",
-          "courseData": "background.sh"
+          "code": "foreground.sh"
       }
-    ]
+    ],
+    "assets": {
+      "client": [
+          {
+            "file": "setup.sh",
+            "target": "/opt",
+            "chmod": "+x"
+          }
+      ]
+    }
   },
   "environment": {
     "hideintro": true,
