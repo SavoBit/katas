@@ -24,6 +24,7 @@ prompt () {
 create_ns_if_needed () {
     local parent; parent="$1"
     local ns; ns="$2"
+
     if [[ "$(apoctl api count ns -n "$parent" --filter "name == $parent/$ns")" == "0" ]]; then
         apoctl api create ns -n "$parent" -k name "$ns" || exit 1
     fi
@@ -35,36 +36,27 @@ echo
 echo "Please enter your information:"
 echo
 
-prompt APORETO_ACCOUNT  "> Aporeto Account Name"
-#prompt APOCTL_API       "> API URL"               "$DEFAULT_API_URL"
-
-echo
-
-echo "We will now retrieve an api token."
-echo "Please enter your password below:"
-echo
-eval "> $(apoctl auth aporeto --account "$APORETO_ACCOUNT" --validity 1h -e)"
+prompt APORETO_ACCOUNT  "> Aporeto account name"
+eval "$(apoctl auth aporeto --account "$APORETO_ACCOUNT" --validity 1h -e)"
 
 echo
 
 ## create namespace
-
-echo "We will create a temporary namespace for this session."
-echo "You can always clean things up by running 'teardown-aporeto.sh'."
-
-echo
-
 session_namespace="/$APORETO_ACCOUNT/$KATACODA_NS_PREFIX/$KATACODA_SESSION_ID"
 
 create_ns_if_needed "/$APORETO_ACCOUNT" "$KATACODA_NS_PREFIX"
 create_ns_if_needed "/$APORETO_ACCOUNT/$KATACODA_NS_PREFIX" "$KATACODA_SESSION_ID"
 
-echo "Katacoda session namespace is $session_namespace"
-echo "You can access it via:"
+echo
 
-echo "  $DEFAULT_CLAD_URL/?namespace=$session_namespace"
+echo "Ready."
+
+echo "Katacoda session namespace is $session_namespace"
+echo "apoctl is configured, and UI url is:"
 
 echo
+
+echo "  $DEFAULT_CLAD_URL/?namespace=$session_namespace"
 
 ## writing source file
 
