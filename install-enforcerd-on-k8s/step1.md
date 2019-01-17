@@ -9,8 +9,7 @@ If you don't you can create a free account at
 First and foremost, please configure your account
 name for this training session by clicking on:
 
-```echo -n "Aporeto Account Name: " && read ns && source <(echo "export APOCTL_ACCOUNT=$ns")```{{execute}}
-
+```setup-account.sh && source ~/aporeto```
 
 Then retrieve a token:
 

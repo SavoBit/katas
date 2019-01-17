@@ -28,7 +28,7 @@
           },
           {
             "file": "setup-account.sh",
-            "target": "/opt/",
+            "target": "/usr/local/bin",
             "chmod": "+x"
           }
       ]
