@@ -16,20 +16,6 @@
             "target": "/opt/",
             "chmod": "+x"
           }
-      ],
-      "host1": [
-        {
-          "file": "setup1.sh",
-          "target": "/opt/",
-          "chmod": "+x"
-        }
-      ],
-      "client": [
-        {
-          "file": "setup2.sh",
-          "target": "/opt/",
-          "chmod": "+x"
-        }
       ]
     }
   },
