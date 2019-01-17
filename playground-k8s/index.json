@@ -27,7 +27,7 @@
             "chmod": "+x"
           },
           {
-            "file": "post-account.sh",
+            "file": "post-setup.sh",
             "target": "/opt/",
             "chmod": "+x"
           }

@@ -69,5 +69,5 @@ export APOCTL_NAMESPACE=$session_namespace
 export APOCTL_TOKEN=$APOCTL_TOKEN
 export APOCTL_API=$DEFAULT_API_URL
 
-source /opt/post-account.sh
+source /opt/post-setup.sh
 EOF
