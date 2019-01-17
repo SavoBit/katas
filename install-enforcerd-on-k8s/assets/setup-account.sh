@@ -36,7 +36,7 @@ echo
 echo "Please enter your information:"
 echo
 
-prompt APORETO_ACCOUNT  "> Aporeto account name"
+prompt APORETO_ACCOUNT  "Aporeto account name"
 eval "$(apoctl auth aporeto --account "$APORETO_ACCOUNT" --validity 1h -e)"
 
 echo
