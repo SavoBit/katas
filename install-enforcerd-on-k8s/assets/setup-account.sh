@@ -45,6 +45,7 @@ echo
 session_namespace="/$APORETO_ACCOUNT/$KATACODA_NS_PREFIX/$KATACODA_SESSION_ID"
 
 create_ns_if_needed "/$APORETO_ACCOUNT" "$KATACODA_NS_PREFIX"
+sleep 1
 create_ns_if_needed "/$APORETO_ACCOUNT/$KATACODA_NS_PREFIX" "$KATACODA_SESSION_ID"
 
 echo
