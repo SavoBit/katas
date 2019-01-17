@@ -1,5 +1,7 @@
 # Aporeto Kubernetes Playground
 
-## Start the kubernetes cluster
+## Setup your namespace
 
-Run ```launch.sh```{{execute}}
+```shell
+export APOCTL_API_NAMESPACE=/yourns
+```{{copy}}
