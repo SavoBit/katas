@@ -7,7 +7,7 @@ clear
 DEFAULT_CLAD_URL="https://console.aporeto.com"
 DEFAULT_API_URL="https://api.console.aporeto.com"
 
-KATACODA_NS_PREFIX="_katacoda"
+KATACODA_NS_PREFIX="_training"
 KATACODA_SESSION_ID="$(uuidgen)"
 
 prompt () {
@@ -30,12 +30,13 @@ create_ns_if_needed () {
 }
 
 ## user input
-
+echo "Training Session Configuration"
+echo
 echo "Please enter your information:"
 echo
 
 prompt APORETO_ACCOUNT  "> Aporeto Account Name"
-prompt APOCTL_API       "> API URL"               "$DEFAULT_API_URL"
+#prompt APOCTL_API       "> API URL"               "$DEFAULT_API_URL"
 
 echo
 
