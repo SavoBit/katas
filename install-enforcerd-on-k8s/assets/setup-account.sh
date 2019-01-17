@@ -1,6 +1,7 @@
 #!/bin/bash
 # shellcheck disable=SC1090
-set
+clear
+
 DEFAULT_API_URL="https://api.console.aporeto.com"
 
 prompt () {
@@ -14,12 +15,17 @@ prompt () {
     export "$vname=${value:-$default}"
 }
 
-prompt APORETO_ACCOUNT  "Aporeto Account Name"
-prompt APOCTL_NAMESPACE "Namespace"             "/$APORETO_ACCOUNT"
-prompt APOCTL_API       "API URL"               "$DEFAULT_API_URL"
+echo "Please enter your information:"
+echo
+
+prompt APORETO_ACCOUNT  "> Aporeto Account Name"
+prompt APOCTL_NAMESPACE "> Namespace"             "/$APORETO_ACCOUNT"
+prompt APOCTL_API       "> API URL"               "$DEFAULT_API_URL"
 
 echo "We will now retrieve an api token."
-eval "$(apoctl auth aporeto --account "$APORETO_ACCOUNT" -e)"
+echo "Please enter your password below:"
+echo
+eval "> $(apoctl auth aporeto --account "$APORETO_ACCOUNT" -e)"
 
 cat << EOF > ~/.aporeto
 export APORETO_ACCOUNT=$APORETO_ACCOUNT
