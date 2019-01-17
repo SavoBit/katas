@@ -1,5 +1,3 @@
-# Create app credentials
-
 We need to create an app credentials for
 enforcerd and aporeto-operator.
 
