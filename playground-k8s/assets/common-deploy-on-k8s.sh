@@ -6,14 +6,12 @@
 echo "Waiting for Katacoda to cacth up (this can take a minute or two)..."
 while ! kubectl version > /dev/null 2>&1; do sleep 1; done
 echo "kubernetes: OK"
-echo
 
 helm init > /dev/null 2>&1
 helm repo add aporeto https://charts.aporeto.com/_unstable/clients > /dev/null 2>&1
 
 while ! helm version > /dev/null 2>&1; do sleep 1; done
 echo "helm: OK"
-echo
 
 apoctl appcred create aporeto-operator \
   --role @auth:role=aporeto-operator \

@@ -11,6 +11,14 @@ name for this training session by clicking on:
 
 `/opt/common-setup-account.sh && source ~/.aporeto`{{execute}}
 
-You can check where `apoctl` is pointing by running:
+To check workloads status:
 
-`apoctl api info`{{execute}}
+```kubectl -n kube-system get pods```{{execute}}
+
+To check enforcerd logs:
+
+```kubectl logs -n kube-system -l app=enforcerd```{{execute}}
+
+To check aporeto-operator logs:
+
+```kubectl logs -n kube-system -l app=aporeto-operator```{{execute}}

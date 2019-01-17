@@ -6,7 +6,7 @@
 clear
 
 DEFAULT_CLAD_URL="https://console.aporeto.com"
-# DEFAULT_API_URL="https://api.console.aporeto.com"
+DEFAULT_API_URL="https://api.console.aporeto.com"
 
 KATACODA_NS_PREFIX="_training"
 KATACODA_SESSION_ID="$(uuidgen)"
@@ -64,9 +64,11 @@ echo
 ## writing source file
 
 cat << EOF > ~/.aporeto
+export DEFAULT_CLAD_URL=$DEFAULT_CLAD_URL
+
 export APOCTL_NAMESPACE=$session_namespace
 export APOCTL_TOKEN=$APOCTL_TOKEN
-export APOCTL_API=$APOCTL_API
+export APOCTL_API=$DEFAULT_API_URL
 
 source /opt/post-account.sh
 EOF
