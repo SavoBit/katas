@@ -2,11 +2,13 @@
   "title": "Aporeto Kubernetes Playground",
   "description": "Play with Aporeto on Kubernetes",
   "details": {
+    "intro": {
+      "courseData": "background.sh"
+    },
     "steps": [
       {
           "title": "Step 1",
-          "text": "step1.md",
-          "courseData": "background.sh"
+          "text": "step1.md"
       }
     ],
     "assets": {
