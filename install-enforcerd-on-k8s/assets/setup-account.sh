@@ -5,7 +5,7 @@ set -e
 clear
 
 DEFAULT_CLAD_URL="https://console.aporeto.com"
-DEFAULT_API_URL="https://api.console.aporeto.com"
+# DEFAULT_API_URL="https://api.console.aporeto.com"
 
 KATACODA_NS_PREFIX="_training"
 KATACODA_SESSION_ID="$(uuidgen)"
@@ -56,8 +56,8 @@ echo "You can always clean things up by running 'teardown-aporeto.sh'."
 
 echo
 
-create_ns_if_needed "/$APORETO_ACCOUNT" "$KATACODA_NS_PREFIX"
-create_ns_if_needed "/$APORETO_ACCOUNT" "$session_namespace"
+create_ns_if_needed "$APORETO_ACCOUNT" "$KATACODA_NS_PREFIX"
+create_ns_if_needed "$APORETO_ACCOUNT" "$session_namespace"
 
 echo "Katacoda session namespace is $session_namespace"
 echo "You can access it via <$DEFAULT_CLAD_URL/?namespace=$session_namespace>"
