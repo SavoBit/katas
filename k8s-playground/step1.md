@@ -1,4 +1,4 @@
-# Aporeto Kubernetes Playground
+# Authentication
 
 ## Authenticate
 
