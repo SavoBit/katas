@@ -1,17 +1,12 @@
 # Aporeto Kubernetes Playground
 
-## Setup environment
-
-To configure your namespace, use the command:
-
-```
-export APOCTL_ACCOUNT=your-account
-export APOCTL_NAMESPACE=/$APOCTL_ACCOUNT
-```{{copy}}
-
-
 ## Authenticate
 
-To retrieve a token, run the command:
+To configure your namespace, first copy and paste
+the following command, and set your account name.
+
+```export APOCTL_ACCOUNT=your-account```{{copy}}
+
+Then authenticate:
 
 `eval $(apoctl auth aporeto -e)`{{execute}}
