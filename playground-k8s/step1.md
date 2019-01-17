@@ -1,15 +1,18 @@
 
-Before you start make sure you have an Aporeto account.
-If you don't, you can create a free account at
-<https://console.aporeto.com/register>.
-
-> You must be familiar with the basic concepts
+> You must have an Aporeto account.
+> If you don't have one, visit <https://console.aporeto.com/register>.
+>
+> You should be familiar with the basic concepts
 > of Aporeto to understand what you'll be doing.
+
+# Setup playground
 
 First and foremost, please configure your account
 name for this training session by clicking on:
 
 `/opt/common-setup-account.sh && source ~/.aporeto`{{execute}}
+
+# Useful commands
 
 To check workloads status:
 
