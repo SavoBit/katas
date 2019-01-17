@@ -17,6 +17,10 @@
       {
         "title": "Deploy Enforcerd",
         "text": "step3.md"
+      },
+      {
+        "title": "Deploy a demo app",
+        "text": "step4.md"
       }
     ],
     "assets": {

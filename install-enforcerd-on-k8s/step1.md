@@ -1,6 +1,6 @@
 
 Before you start make sure you have an Aporeto account.
-If you don't you can create a free account at
+If you don't, you can create a free account at
 <https://console.aporeto.com/register>.
 
 > You must be familiar with the basic concepts

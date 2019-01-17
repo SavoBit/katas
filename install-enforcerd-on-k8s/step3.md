@@ -1,9 +1,9 @@
 Finally we deploy the charts using helm.
 
-* aporeto-operator will install a daemon and some crds
-* enforcerd will be deployed as a daemonset
+* aporeto-operator installs a deployment and crds
+* enforcerd installs as a daemonset
 
-First we deploy aporeto-operator:
+Deploy aporeto-operator:
 
 ```
 helm install \
@@ -13,7 +13,7 @@ helm install \
 ```{{execute}}
 
 
-Then we deploy enforcerd:
+Deploy enforcerd:
 
 ```
 helm install \
@@ -25,5 +25,5 @@ helm install \
 To verify the status of the protection workload:
 
 ```
-kubectl get pods -l type=aporeto
+kubectl get pods -l type=aporeto -n kube-system
 ```{{execute}}
