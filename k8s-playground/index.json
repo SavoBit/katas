@@ -10,9 +10,23 @@
       }
     ],
     "assets": {
+      "host01": [
+          {
+            "file": "setup.sh",
+            "target": "/opt/",
+            "chmod": "+x"
+          }
+      ],
       "host1": [
         {
-          "file": "setup.sh",
+          "file": "setup2.sh",
+          "target": "/opt/",
+          "chmod": "+x"
+        }
+      ],
+      "client": [
+        {
+          "file": "setup3.sh",
           "target": "/opt/",
           "chmod": "+x"
         }
