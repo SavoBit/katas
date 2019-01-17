@@ -19,14 +19,14 @@
       ],
       "host1": [
         {
-          "file": "setup2.sh",
+          "file": "setup1.sh",
           "target": "/opt/",
           "chmod": "+x"
         }
       ],
       "client": [
         {
-          "file": "setup3.sh",
+          "file": "setup2.sh",
           "target": "/opt/",
           "chmod": "+x"
         }
