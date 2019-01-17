@@ -9,4 +9,7 @@ the following command, and set your account name.
 
 Then authenticate:
 
-`eval $(apoctl auth aporeto -e)`{{execute}}
+```
+eval $(apoctl auth aporeto --account $APOCTL_ACCOUNT -e)
+export APOCTL_NAMESPACE=$APOCTL_ACCOUNT
+```{{execute}}
