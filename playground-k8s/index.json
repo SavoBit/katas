@@ -5,7 +5,7 @@
     },
     "steps": [
       {
-          "title": "Aporeto Playground",
+          "title": "Aporeto Kubernetes Playground",
           "text": "step1.md"
       }
     ],
