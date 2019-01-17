@@ -13,7 +13,7 @@
       "master": [
           {
             "file": "setup.sh",
-            "target": "/opt",
+            "target": "/opt/",
             "chmod": "+x"
           }
       ]
