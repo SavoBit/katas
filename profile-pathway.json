@@ -4,6 +4,11 @@
       "title": "Install Aporeto Enforcerd on Kubernetes",
       "description": "This scenario contains will walk you through the installation of enforcerd on Kubernetes",
       "id": "install-enforcerd-on-k8s"
+    },
+    {
+      "title": "Kubernetes Playground",
+      "description": "This is a playground that starts with enforcer installed on Kubernetes.",
+      "id": "playground-k8s"
     }
   ]
 }

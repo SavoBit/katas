@@ -1,6 +1,4 @@
 {
-  "title": "Kubernetes Playground",
-  "description": "This is a playground that starts with enforcer installed on Kubernetes.",
   "details": {
     "intro": {
       "courseData": "background.sh"

@@ -16,8 +16,8 @@ package:
 	cp -a ./common/common-*.sh ./install-enforcerd-on-k8s/assets
 	cp -a ./common/background.sh ./install-enforcerd-on-k8s
 
-	cp -a ./common/common-*.sh ./playground/assets
-	cp -a ./common/background.sh ./playground
+	cp -a ./common/common-*.sh ./playground-k8s/assets
+	cp -a ./common/background.sh ./playground-k8s
 
 publish: package
 	katacoda push
