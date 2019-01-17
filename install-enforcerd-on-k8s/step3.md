@@ -26,4 +26,4 @@ To verify the status of the protection workload:
 
 ```
 kubectl get pods -l type=aporeto
-```execute
+```{{execute}}

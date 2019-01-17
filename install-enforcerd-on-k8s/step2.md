@@ -19,31 +19,3 @@ apoctl appcred create enforcerd \
 
 
 # Protect the Kubernetes cluster
-
-Finally we deploy the charts using helm.
-
-
-First we deploy aporeto-operator:
-
-```
-helm install \
-    --name aporeto-operator \
-    --namespace kube-system \
-    aporeto/aporeto-operator
-```{{execute}}
-
-
-Then we deploy enforcerd:
-
-```
-helm install \
-    --name enforcerd \
-    --namespace kube-system \
-    aporeto/enforcerd
-```{{execute}}
-
-To verify the status of the protection workload:
-
-```
-kubectl get pods -l type=aporeto
-```execute

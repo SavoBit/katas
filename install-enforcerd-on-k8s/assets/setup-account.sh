@@ -66,4 +66,10 @@ cat << EOF > ~/.aporeto
 export APOCTL_NAMESPACE=$session_namespace
 export APOCTL_TOKEN=$APOCTL_TOKEN
 export APOCTL_API=$APOCTL_API
+
+echo "Waiting for Kubernetes to start (this can take a minute or two)..."
+while ! kubectl version 2>&1 ; sleep 1; done
+
+echo "Waiting for helm to be ready..."
+while ! helm version 2>&1 ; sleep 1; done
 EOF
