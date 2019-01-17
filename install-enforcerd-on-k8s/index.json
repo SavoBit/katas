@@ -3,7 +3,9 @@
   "description": "This scenario contains will walk you through the installation of enforcerd on Kubernetes",
   "details": {
     "intro": {
-      "courseData": "background.sh"
+      "courseData": "background.sh",
+      "title": "Install Aporeto Enforcerd on Kubernetes",
+      "text": "intro.md"
     },
     "steps": [
       {

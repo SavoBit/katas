@@ -1,3 +1,5 @@
-# Aporeto Kubernetes Playground
+In this session you will learn how to deploy Aporeto
+to secure workloads runnning on a kubernetes setup.
 
-This is a playground environment.
+> Aporeto Katacoda session create a training namespace
+> in your Aporeto account in subnamespace `-training`.
