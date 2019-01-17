@@ -48,15 +48,15 @@ echo
 
 ## create namespace
 
-session_namespace="/$APORETO_ACCOUNT/$KATACODA_NS_PREFIX/$KATACODA_SESSION_ID"
+session_namespace="$KATACODA_NS_PREFIX/$KATACODA_SESSION_ID"
 
 echo "We will create a temporary namespace for this session."
 echo "You can always clean things up by running 'teardown-aporeto.sh'."
 
 echo
 
-create_ns_if_needed "/$APORETO_ACCOUNT/$KATACODA_NS_PREFIX"
-create_ns_if_needed "$session_namespace"
+create_ns_if_needed "/$APORETO_ACCOUNT" "$KATACODA_NS_PREFIX"
+create_ns_if_needed "/$APORETO_ACCOUNT" "$session_namespace"
 
 echo "Katacoda session namespace is $session_namespace"
 echo "You can access it via <$DEFAULT_CLAD_URL/?namespace=$session_namespace>"
