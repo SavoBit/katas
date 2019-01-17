@@ -1,5 +1,7 @@
 #!/bin/bash
 # shellcheck disable=SC1090
+set -e
+
 clear
 
 DEFAULT_API_URL="https://api.console.aporeto.com"
@@ -22,14 +24,19 @@ prompt APORETO_ACCOUNT  "> Aporeto Account Name"
 prompt APOCTL_NAMESPACE "> Namespace"             "/$APORETO_ACCOUNT"
 prompt APOCTL_API       "> API URL"               "$DEFAULT_API_URL"
 
+echo
+
 echo "We will now retrieve an api token."
 echo "Please enter your password below:"
 echo
 eval "> $(apoctl auth aporeto --account "$APORETO_ACCOUNT" -e)"
 
 cat << EOF > ~/.aporeto
-export APORETO_ACCOUNT=$APORETO_ACCOUNT
 export APOCTL_NAMESPACE=$APOCTL_NAMESPACE
 export APOCTL_TOKEN=$APOCTL_TOKEN
 export APOCTL_API=$APOCTL_API
 EOF
+
+clear
+
+echo "Success."
