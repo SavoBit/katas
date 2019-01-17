@@ -37,6 +37,6 @@ export APOCTL_TOKEN=$APOCTL_TOKEN
 export APOCTL_API=$APOCTL_API
 EOF
 
-clear
+echo
 
 echo "Success."

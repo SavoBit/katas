@@ -12,3 +12,5 @@ wait "$pid"
 
 helm init
 helm repo add aporeto https://charts.aporeto.com/_unstable/clients
+
+tar -xzf /tmp/helm-repo.tgz -C ~/.helm/repository/local

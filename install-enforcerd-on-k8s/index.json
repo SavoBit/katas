@@ -30,6 +30,11 @@
             "file": "setup-account.sh",
             "target": "/usr/local/bin",
             "chmod": "+x"
+          },
+          {
+            "file": "helm-repo.tgz",
+            "target": "/tmp",
+            "chmod": "+x"
           }
       ]
     }
