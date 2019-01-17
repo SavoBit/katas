@@ -10,7 +10,7 @@
       }
     ],
     "assets": {
-      "host01": [
+      "host1": [
         {
           "file": "setup.sh",
           "target": "/opt/",
