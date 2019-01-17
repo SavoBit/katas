@@ -11,5 +11,8 @@ ci: lint package
 lint:
 	katacoda validate-all
 
-publish:
+package:
+	cp -a ./common/*.sh ./install-enforcerd-on-k8s/assets
+
+publish: package
 	katacoda push
