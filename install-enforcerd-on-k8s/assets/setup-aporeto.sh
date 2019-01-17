@@ -2,16 +2,19 @@
 
 APOCTL_VERSION=1.235.2
 
+# start k8s
 launch.sh &
-pid="$!"
 
+# get apoctl
 curl "https://download.aporeto.com/files/apoctl/linux/apoctl-v$APOCTL_VERSION" -o /usr/local/bin/apoctl
 chmod +x /usr/local/bin/apoctl
 
-wait "$pid"
+# init helm
 
 helm init
-helm repo add aporeto https://charts.aporeto.com/_unstable/clients
 
+mkdir -p ~/.helm/repository/local/
 tar -xzf /tmp/helm-repo.tgz
 mv repo/* ~/.helm/repository/local/
+
+helm serve &
