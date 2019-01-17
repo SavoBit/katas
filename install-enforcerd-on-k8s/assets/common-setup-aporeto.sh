@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# DO NOT EDIT OUTSIDE OD /common folder
+
 APOCTL_VERSION=1.235.2
 
 # start k8s

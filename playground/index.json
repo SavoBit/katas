@@ -1,28 +1,14 @@
 {
-  "title": "Install Aporeto Enforcerd on Kubernetes",
-  "description": "This scenario contains will walk you through the installation of enforcerd on Kubernetes",
+  "title": "Kubernetes Playground",
+  "description": "This is a playground that starts with enforcer installed on Kubernetes.",
   "details": {
     "intro": {
-      "courseData": "background.sh",
-      "title": "Install Aporeto Enforcerd on Kubernetes",
-      "text": "intro.md"
+      "courseData": "background.sh"
     },
     "steps": [
       {
-          "title": "Authenticate",
+          "title": "Play",
           "text": "step1.md"
-      },
-      {
-        "title": "Deploy App Credentials",
-        "text": "step2.md"
-      },
-      {
-        "title": "Deploy Enforcerd",
-        "text": "step3.md"
-      },
-      {
-        "title": "Deploy a demo app",
-        "text": "step4.md"
       }
     ],
     "assets": {
@@ -38,6 +24,11 @@
             "chmod": "+x"
           },
           {
+            "file": "common-deploy-on-k8s.sh",
+            "target": "/opt/",
+            "chmod": "+x"
+          },
+          {
             "file": "post-account.sh",
             "target": "/opt/",
             "chmod": "+x"
@@ -46,6 +37,7 @@
     }
   },
   "environment": {
+    "hideintro": true,
     "hidefinish": true,
     "uilayout": "terminal"
   },

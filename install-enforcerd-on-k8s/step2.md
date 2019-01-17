@@ -6,7 +6,7 @@ For aporeto-operator:
 ```
 apoctl appcred create aporeto-operator \
   --role @auth:role=aporeto-operator \
-  --type k8s | kubectl apply -f -  -n kube-system
+  --type k8s | kubectl apply -f - -n kube-system
 ```{{execute}}
 
 For enforcerd:
@@ -14,5 +14,5 @@ For enforcerd:
 ```
 apoctl appcred create enforcerd \
   --role @auth:role=enforcer \
-  --type k8s | kubectl apply -f -  -n kube-system
+  --type k8s | kubectl apply -f - -n kube-system
 ```{{execute}}

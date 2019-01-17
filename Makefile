@@ -12,7 +12,12 @@ lint:
 	katacoda validate-all
 
 package:
-	cp -a ./common/*.sh ./install-enforcerd-on-k8s/assets
+	# TODO: make that good
+	cp -a ./common/common-*.sh ./install-enforcerd-on-k8s/assets
+	cp -a ./common/background.sh ./install-enforcerd-on-k8s
+
+	cp -a ./common/common-*.sh ./playground/assets
+	cp -a ./common/background.sh ./playground
 
 publish: package
 	katacoda push
