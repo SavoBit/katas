@@ -6,7 +6,7 @@ alias k="kubectl -n"
 /opt/common-deploy-on-k8s.sh
 
 echo
-echo "You can check your enforcerd at:"
+echo "Useful links:"
 echo
 echo "platform:  $DEFAULT_CLAD_URL/app/visualize?namespace=$APOCTL_NAMESPACE"
 echo "enforcers: $DEFAULT_CLAD_URL/app/enforcers?namespace=$APOCTL_NAMESPACE"
