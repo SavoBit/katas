@@ -41,8 +41,9 @@ echo
 echo "Please enter your credentials:"
 echo
 prompt APORETO_ACCOUNT  "Aporeto account name"
+
+## auth
 eval "$(apoctl auth aporeto --account "$APORETO_ACCOUNT" --validity 1h -e)"
-echo
 
 ## create namespace
 session_namespace="/$APORETO_ACCOUNT/$KATACODA_NS_PREFIX/$KATACODA_SESSION_ID"
