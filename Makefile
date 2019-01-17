@@ -13,8 +13,8 @@ lint:
 
 package:
 	# TODO: make that good
-	cp -a ./common/common-*.sh ./install-enforcerd-on-k8s/assets
-	cp -a ./common/background.sh ./install-enforcerd-on-k8s
+	cp -a ./common/common-*.sh ./install-on-kubernetes/assets
+	cp -a ./common/background.sh ./install-on-kubernetes
 
 	cp -a ./common/common-*.sh ./playground-k8s/assets
 	cp -a ./common/background.sh ./playground-k8s
