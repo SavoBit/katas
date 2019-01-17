@@ -46,7 +46,6 @@ echo
 
 ## create namespace
 session_namespace="/$APORETO_ACCOUNT/$KATACODA_NS_PREFIX/$KATACODA_SESSION_ID"
-echo "> Creating session namespace..."
 create_ns_if_needed "/$APORETO_ACCOUNT" "$KATACODA_NS_PREFIX"
 sleep 1
 create_ns_if_needed "/$APORETO_ACCOUNT/$KATACODA_NS_PREFIX" "$KATACODA_SESSION_ID"
