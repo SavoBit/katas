@@ -6,13 +6,13 @@
       {
           "title": "Step 1",
           "text": "step1.md",
-          "code": "foreground.sh"
+          "courseData": "background.sh"
       }
     ],
     "assets": {
       "host01": [
           {
-            "file": "setup.sh",
+            "file": "setup-aporeto.sh",
             "target": "/opt/",
             "chmod": "+x"
           }
