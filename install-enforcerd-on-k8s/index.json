@@ -25,6 +25,11 @@
             "file": "setup-aporeto.sh",
             "target": "/opt/",
             "chmod": "+x"
+          },
+          {
+            "file": "setup-account.sh",
+            "target": "/opt/",
+            "chmod": "+x"
           }
       ]
     }

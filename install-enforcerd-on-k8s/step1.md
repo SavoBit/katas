@@ -1,16 +1,23 @@
 
-Before you start make sure you have an account on
-https://console.aporeto.com.
-If not, create a one.
+Before you start make sure you have an Aporeto account.
+If you don't you can create a free account at
+<https://console.aporeto.com/register>.
 
 > You must be familiar with the basic concepts
-> of aporeto to understand what you'll be doing.
+> of Aporeto to understand what you'll be doing.
 
-First and foremost, copy the snippet below and paste
-it in the terminal to set your account:
+First and foremost, please configure your account
+name for this training session by clicking on:
 
-```eval %(echo export APOCTL_ACCOUNT=?)```{{execute}}
+```echo -n "Aporeto Account Name: " && read ns && source <(echo "export APOCTL_ACCOUNT=$ns")```{{execute}}
 
+
+Then retrieve a token:
+
+```
+eval $(apoctl auth aporeto --account $APOCTL_ACCOUNT -e)
+apoctl api info
+```{{execute}}
 
 
 
