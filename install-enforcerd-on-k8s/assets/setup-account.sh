@@ -29,7 +29,7 @@ echo
 echo "We will now retrieve an api token."
 echo "Please enter your password below:"
 echo
-eval "> $(apoctl auth aporeto --account "$APORETO_ACCOUNT" -e)"
+eval "> $(apoctl auth aporeto --account "$APORETO_ACCOUNT" --validity 1h -e)"
 
 cat << EOF > ~/.aporeto
 export APOCTL_NAMESPACE=$APOCTL_NAMESPACE

@@ -1,18 +1,9 @@
-# Create an app credential for enforcerd
+# Create app credentials
 
-```
-apoctl appcred create enforcerd \
-  --role @auth:role=enforcer \
-  --type k8s | kubectl apply -f -  -n kube-system
-```{{execute}}
+We need to create an app credentials for
+enforcerd and aporeto-operator.
 
-To verify :
-
-```
-kubectl get secret enforcerd -n kube-system
-```{{execute}}
-
-# Create an app credential for aporeto operator
+Let's create an appcred for aporeto-operator:
 
 ```
 apoctl appcred create aporeto-operator \
@@ -20,21 +11,41 @@ apoctl appcred create aporeto-operator \
   --type k8s | kubectl apply -f -  -n kube-system
 ```{{execute}}
 
-To verify :
+Then let's create an appcred for enforcerd:
 
 ```
-kubectl get secret aporeto-operator -n kube-system
+apoctl appcred create enforcerd \
+  --role @auth:role=enforcer \
+  --type k8s | kubectl apply -f -  -n kube-system
 ```{{execute}}
 
 
-# Deploy Aporeto Operator
+# Protect the Kubernetes cluster
+
+Finally we deploy the charts using helm.
+
+
+First we deploy aporeto-operator:
 
 ```
-helm install aporeto/aporeto-operator
+helm install \
+    --name aporeto-operator \
+    --namespace kube-system \
+    aporeto/aporeto-operator
 ```{{execute}}
 
-# Deploy Aporeto Enforcerd
+
+Then we deploy enforcerd:
 
 ```
-helm install aporeto/enforcerd
+helm install \
+    --name enforcerd \
+    --namespace kube-system \
+    aporeto/enforcerd
 ```{{execute}}
+
+To verify the status of the protection workload:
+
+```
+kubectl get pods -l type=aporeto
+```execute
