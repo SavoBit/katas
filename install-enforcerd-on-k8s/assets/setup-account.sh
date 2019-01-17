@@ -24,8 +24,8 @@ prompt () {
 create_ns_if_needed () {
     local parent; parent="$1"
     local ns; ns="$2"
-    if [[ "$(apoctl api count ns -n "/$parent" --filter "name == /$parent/$ns")" == "0" ]]; then
-        apoctl api create ns -n "/$parent" -k name "$ns" || exit 1
+    if [[ "$(apoctl api count ns -n "$parent" --filter "name == $parent/$ns")" == "0" ]]; then
+        apoctl api create ns -n "$parent" -k name "$ns" || exit 1
     fi
 }
 
