@@ -1,4 +1,3 @@
-
 > You must have an Aporeto account.
 > If you don't have one, visit <https://console.aporeto.com/register>.
 >

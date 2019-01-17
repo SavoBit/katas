@@ -6,7 +6,7 @@
     "steps": [
       {
           "title": "Aporeto Kubernetes Playground",
-          "text": "step1.md"
+          "text": "_setup.md"
       }
     ],
     "assets": {

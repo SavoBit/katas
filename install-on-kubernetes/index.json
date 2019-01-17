@@ -7,8 +7,8 @@
     },
     "steps": [
       {
-          "title": "Authenticate",
-          "text": "step1.md"
+          "title": "Setup",
+          "text": "_setup.md"
       },
       {
         "title": "Deploy App Credentials",
