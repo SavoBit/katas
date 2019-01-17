@@ -31,7 +31,7 @@
             "chmod": "+x"
           },
           {
-            "file": "common-setup-account.sh",
+            "file": "common-setup.sh",
             "target": "/opt/",
             "chmod": "+x"
           },

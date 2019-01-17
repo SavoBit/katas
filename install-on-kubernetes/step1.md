@@ -9,7 +9,7 @@ If you don't, you can create a free account at
 First and foremost, please configure your account
 name for this training session by clicking on:
 
-`/opt/common-setup-account.sh && source ~/.aporeto`{{execute}}
+`/opt/common-account.sh && source ~/.aporeto`{{execute}}
 
 You can check where `apoctl` is pointing by running:
 

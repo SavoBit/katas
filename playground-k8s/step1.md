@@ -10,7 +10,7 @@
 First and foremost, please configure your account
 name for this training session by clicking on:
 
-`/opt/common-setup-account.sh && source ~/.aporeto`{{execute}}
+`/opt/common-account.sh && source ~/.aporeto`{{execute}}
 
 # Useful commands
 
