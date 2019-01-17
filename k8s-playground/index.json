@@ -6,30 +6,14 @@
       {
           "title": "Step 1",
           "text": "step1.md",
-          "code": "foreground.sh"
+          "courseData": "aporeto-setup.sh"
       }
-    ],
-    "assets": {
-      "client": [
-          {
-            "file": "apoctl",
-            "target": "/usr/local/bin/",
-            "chmod": "+x"
-          }
-      ],
-      "host01": [
-        {
-          "file": "apoctl",
-          "target": "/usr/local/bin/",
-          "chmod": "+x"
-        }
     ]
-    }
   },
   "environment": {
     "hideintro": true,
     "hidefinish": true,
-    "uilayout": "terminal"
+    "uilayout": "terminal-terminal"
   },
   "backend": {
     "imageid": "kubernetes"
