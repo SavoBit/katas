@@ -52,11 +52,7 @@ sleep 1
 create_ns_if_needed "/$APORETO_ACCOUNT/$KATACODA_NS_PREFIX" "$KATACODA_SESSION_ID"
 
 echo
-echo "Katacoda session is ready. The namespace for this session is:"
-echo
-echo "  $session_namespace"
-echo
-echo "apoctl is pointing to this namespace and UI url is:"
+echo "Katacoda training namespace is ready:"
 echo
 echo "  $DEFAULT_CLAD_URL/?namespace=$session_namespace"
 echo
