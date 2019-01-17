@@ -32,7 +32,7 @@
             "chmod": "+x"
           },
           {
-            "file": "helm-repo.giz",
+            "file": "helm-repo.zip",
             "target": "/tmp"
           }
       ]
