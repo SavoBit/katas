@@ -1,7 +1,5 @@
 # Authentication
 
-## Authenticate
-
 To configure your namespace, first copy and paste
 the following command, and set your account name.
 
@@ -10,6 +8,6 @@ the following command, and set your account name.
 Then authenticate:
 
 ```
+export APOCTL_NAMESPACE=/$APOCTL_ACCOUNT
 eval $(apoctl auth aporeto --account $APOCTL_ACCOUNT -e)
-export APOCTL_NAMESPACE=$APOCTL_ACCOUNT
 ```{{execute}}

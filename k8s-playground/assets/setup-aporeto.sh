@@ -7,3 +7,5 @@ curl https://download.aporeto.com/files/apoctl/linux/apoctl-v1.235.2 -o /usr/loc
 chmod +x /usr/local/bin/apoctl
 
 wait "$pid"
+
+helm init
