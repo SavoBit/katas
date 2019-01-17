@@ -3,8 +3,6 @@
 
 # DO NOT EDIT OUTSIDE OD /common folder
 
-setup-account.sh && source ~/.aporeto
-
 echo "Waiting for Katacoda to cacth up (this can take a minute or two)..."
 while ! kubectl version > /dev/null 2>&1; do sleep 1; done
 echo "kubernetes: OK"
