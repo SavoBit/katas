@@ -2,7 +2,7 @@
   "scenarios": [
     {
       "title": "Install Aporeto Enforcerd on Kubernetes",
-      "description": "Learn how to install Aporeto on Kubernetes cluster.",
+      "description": "Learn how to install Aporeto on a Kubernetes cluster.",
       "id": "install-on-kubernetes"
     },
     {
