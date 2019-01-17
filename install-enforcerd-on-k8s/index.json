@@ -33,8 +33,7 @@
           },
           {
             "file": "helm-repo.tgz",
-            "target": "/tmp",
-            "chmod": "+x"
+            "target": "/tmp"
           }
       ]
     }
