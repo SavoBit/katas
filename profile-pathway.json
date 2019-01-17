@@ -1,9 +1,9 @@
 {
   "scenarios": [
     {
-      "title": "Aporeto Kubernetes Playground",
-      "description": "This scenario contains all the tools to play with Aporeto on Kubernetes",
-      "id": "k8s-playground"
+      "title": "Install Aporeto Enforcerd on Kubernetes",
+      "description": "This scenario contains will walk you through the installation of enforcerd on Kubernetes",
+      "id": "install-enforcerd-on-k8s"
     }
   ]
 }

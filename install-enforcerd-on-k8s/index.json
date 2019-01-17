@@ -1,19 +1,23 @@
 {
-  "title": "Aporeto Kubernetes Playground",
-  "description": "Play with Aporeto on Kubernetes",
+  "title": "Install Aporeto Enforcerd on Kubernetes",
+  "description": "This scenario contains will walk you through the installation of enforcerd on Kubernetes",
   "details": {
     "intro": {
       "courseData": "background.sh"
     },
     "steps": [
       {
-          "title": "Step 1",
+          "title": "Authenticate",
           "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Deploy App Credentials",
         "text": "step2.md"
-    }
+      },
+      {
+        "title": "Deploy Enforcerd",
+        "text": "step3.md"
+      }
     ],
     "assets": {
       "host01": [
