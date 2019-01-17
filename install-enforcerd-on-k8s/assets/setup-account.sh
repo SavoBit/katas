@@ -26,12 +26,13 @@ create_ns_if_needed () {
     local ns; ns="$2"
 
     if [[ "$(apoctl api count ns -n "$parent" --filter "name == $parent/$ns")" == "0" ]]; then
+        echo "* creating namespace $parent/$ns"
         apoctl api create ns -n "$parent" -k name "$ns" || exit 1
     fi
 }
 
 ## user input
-echo "Training Session Configuration"
+echo "Aporeto Katacoda Session Configuration"
 echo
 echo "Please enter your information:"
 echo
@@ -50,14 +51,15 @@ create_ns_if_needed "/$APORETO_ACCOUNT/$KATACODA_NS_PREFIX" "$KATACODA_SESSION_I
 
 echo
 
-echo "Ready."
-
-echo "Katacoda session namespace is $session_namespace"
-echo "apoctl is configured, and UI url is:"
-
+echo "Katacoda session namespace is ready."
+echo "This session namespace is :"
 echo
-
+echo "$session_namespace"
+echo
+echo "apoctl is pointing to this namespace and UI url is:"
+echo
 echo "  $DEFAULT_CLAD_URL/?namespace=$session_namespace"
+echo
 
 ## writing source file
 
