@@ -6,8 +6,9 @@ clear
 
 DEFAULT_CLAD_URL="https://console.aporeto.com"
 DEFAULT_API_URL="https://api.console.aporeto.com"
+
+KATACODA_NS_PREFIX="_katacoda"
 KATACODA_SESSION_ID="$(uuidgen)"
-KATACODA_NS_PREFIX="/_katacoda"
 
 prompt () {
     local vname; vname="$1"
