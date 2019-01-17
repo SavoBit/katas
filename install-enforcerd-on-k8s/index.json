@@ -30,6 +30,11 @@
             "file": "setup-account.sh",
             "target": "/usr/local/bin",
             "chmod": "+x"
+          },
+          {
+            "file": "post-account.sh",
+            "target": "/opt/",
+            "chmod": "+x"
           }
       ]
     }
