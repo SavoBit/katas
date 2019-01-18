@@ -12,7 +12,6 @@ helm install \
     aporeto/aporeto-operator
 ```{{execute}}
 
-
 Deploy enforcerd:
 
 ```
