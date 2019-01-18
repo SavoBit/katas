@@ -21,7 +21,6 @@ prompt () {
     echo -n "$message$( [ -n "$default" ] && echo " ($default)"): "
     read -r value
     export "$vname=${value:-$default}"
-    export "$vname=${value:-$default}"
 }
 
 create_ns_if_needed () {
@@ -43,7 +42,7 @@ echo "your Aporeto account."
 echo
 echo "Please enter your credentials:"
 echo
-prompt APORETO_ACCOUNT  "Aporeto account name"
+prompt APORETO_ACCOUNT "Aporeto account name"
 
 ## auth
 eval "$(apoctl auth aporeto --account "$APORETO_ACCOUNT" --validity 1h -e)"

@@ -21,7 +21,6 @@ prompt () {
     echo -n "$message$( [ -n "$default" ] && echo " ($default)"): "
     read -r value
     export "$vname=${value:-$default}"
-    export "$vname=${value:-$default}"
 }
 
 create_ns_if_needed () {
@@ -35,6 +34,7 @@ create_ns_if_needed () {
 
 ## user input
 echo "Aporeto Katacoda Session Configuration"
+echo "release-$(cat /etc/APORETO_RELEASE)"
 echo
 echo "This script configures the Katacoda environment"
 echo "to make it point to a temporay namespace in"
@@ -42,7 +42,7 @@ echo "your Aporeto account."
 echo
 echo "Please enter your credentials:"
 echo
-prompt APORETO_ACCOUNT  "Aporeto account name"
+prompt APORETO_ACCOUNT "Aporeto account name"
 
 ## auth
 eval "$(apoctl auth aporeto --account "$APORETO_ACCOUNT" --validity 1h -e)"
