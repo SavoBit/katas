@@ -10,7 +10,7 @@ APORETO_RELEASE=${marked_release:-$DEFAULT_RELEASE}
 echo "$APORETO_RELEASE" > /etc/APORETO_RELEASE
 
 # get apoctl
-curl "https://download.aporeto.com/releases/release-$APORETO_RELEASE/apoctl/linux/apoctl" -o /usr/local/bin/apoctl
+curl -sSL "https://download.aporeto.com/releases/release-$APORETO_RELEASE/apoctl/linux/apoctl" -o /usr/local/bin/apoctl
 chmod +x /usr/local/bin/apoctl
 
 # start k8s
