@@ -15,6 +15,10 @@ echo "> Downloading apoctl"
 curl -sSL "https://download.aporeto.com/releases/$APORETO_RELEASE/apoctl/linux/apoctl" -o /usr/local/bin/apoctl
 chmod +x /usr/local/bin/apoctl
 
+echo "> Downloading tg"
+curl -sSL "https://download.aporeto.com/releases/$APORETO_RELEASE/tg/linux/tg" -o /usr/local/bin/tg
+chmod +x /usr/local/bin/tg
+
 # start k8s
 echo "> Starting Kubernetes"
 launch.sh &
