@@ -2,7 +2,7 @@
 
 # DO NOT EDIT OUTSIDE OD /common folder
 
-APORETO_RELEASE="3.5.0-r5"
+APORETO_RELEASE=${"$APORETO_RELEASE":-"3.5.0-r5"}
 
 # start k8s
 launch.sh &
