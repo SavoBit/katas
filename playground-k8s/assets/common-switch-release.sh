@@ -9,7 +9,8 @@ fi
 
 echo "Switching from $APORETO_RELEASE_CURRENT to $APORETO_RELEASE"
 
-echo "$APORETO_RELEASE" /etc/APORETO_RELEASE && /opt/common-setup-aporeto.sh
+echo "$APORETO_RELEASE" > /etc/APORETO_RELEASE
+/opt/common-setup-aporeto.sh
 
 echo
 echo "Switched to $APORETO_RELEASE."
