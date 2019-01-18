@@ -20,6 +20,3 @@ package:
 	cp -a ./common/common-*.sh ./playground-k8s/assets
 	cp -a ./common/background.sh ./playground-k8s
 	cp -a ./common/_setup.md ./playground-k8s
-
-publish: package
-	katacoda push
