@@ -2,12 +2,11 @@
 
 **Important: You must setup the environment before continuing.**
 
-Please click on the following command then **wait** for it to complete before continuing.
+Please click on the following command then **wait** for it to complete.
 
 `/opt/common-setup.sh && source ~/.aporeto`{{execute}}
 
 > You must have an Aporeto account.
 > If you don't have one, visit <https://console.aporeto.com/register>.
 >
-> You should be familiar with the [basic concepts](https://docs.console.aporeto.com)
-> of Aporeto to understand what you'll be doing.
+> You should be familiar with the [Basic Concepts of Aporeto](https://junon.console.aporeto.com).
