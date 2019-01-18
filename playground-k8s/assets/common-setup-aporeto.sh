@@ -19,6 +19,10 @@ echo "> Downloading tg"
 curl -sSL "https://download.aporeto.com/releases/$APORETO_RELEASE/tg/linux/tg" -o /usr/local/bin/tg
 chmod +x /usr/local/bin/tg
 
+cat << EOF > ~/.profile
+alias nslink="echo \$DEFAULT_CLAD_URL/?namespace=$APOCTL_NAMESPACE"
+EOF
+
 # start k8s
 echo "> Starting Kubernetes"
 launch.sh &
