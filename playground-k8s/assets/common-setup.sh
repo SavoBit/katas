@@ -7,9 +7,11 @@ clear
 
 DEFAULT_CLAD_URL="https://console.aporeto.com"
 DEFAULT_API_URL="https://api.console.aporeto.com"
+DEFAULT_HELM_REPO_URL="https://charts.aporeto.com/_unstable/clients"
 
 KATACODA_NS_PREFIX="_training"
 KATACODA_SESSION_ID="$(uuidgen)"
+
 
 prompt () {
     local vname; vname="$1"
@@ -61,6 +63,7 @@ echo
 
 cat << EOF > ~/.aporeto
 export DEFAULT_CLAD_URL=$DEFAULT_CLAD_URL
+export DEFAULT_HELM_REPO_URL=$DEFAULT_HELM_REPO_URL
 
 export KATACODA_NS_PREFIX=$KATACODA_NS_PREFIX
 export KATACODA_SESSION_ID=$KATACODA_SESSION_ID

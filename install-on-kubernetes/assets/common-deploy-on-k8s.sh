@@ -8,7 +8,7 @@ while ! kubectl version > /dev/null 2>&1; do sleep 1; done
 echo "* api: OK"
 
 helm init > /dev/null 2>&1
-helm repo add aporeto https://charts.aporeto.com/_unstable/clients > /dev/null 2>&1
+helm repo add aporeto "$DEFAULT_HELM_REPO_URL" > /dev/null 2>&1
 
 while ! helm version > /dev/null 2>&1; do sleep 1; done
 echo "* helm: OK"
