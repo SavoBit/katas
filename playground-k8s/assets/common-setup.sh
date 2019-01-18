@@ -62,6 +62,8 @@ echo
 ## writing source file
 
 cat << EOF > ~/.aporeto
+export APORETO_RELEASE=$(cat /etc/APORETO_RELEASE)
+
 export DEFAULT_CLAD_URL=$DEFAULT_CLAD_URL
 export DEFAULT_HELM_REPO_URL=$DEFAULT_HELM_REPO_URL
 
