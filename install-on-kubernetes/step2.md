@@ -1,4 +1,9 @@
-We need to create some app credentials for
+App Credentials (appcreds) are JSON files containing a x509 certificate
+as well as more information about the control plane.
+
+> Lear more about [App Credentials](https://junon.console.aporeto.com/docs/main/references/appcredentials/).
+
+We need to create some App Credentials for
 enforcerd and aporeto-operator.
 
 For aporeto-operator:
@@ -9,10 +14,25 @@ apoctl appcred create aporeto-operator \
   --type k8s | kubectl apply -f - -n kube-system
 ```{{execute}}
 
+This creates the appcred named `aporeto-operator` in the
+current apoctl namespace with the role `aporeto-operator` and
+prints the output as a
+[Kubernetes Secret Definition](https://kubernetes.io/docs/concepts/configuration/secret/).
+The output is then piped to `kubectl` to apply it in the namespace `kube-system`.
+
 For enforcerd:
 
 ```
 apoctl appcred create enforcerd \
   --role @auth:role=enforcer \
   --type k8s | kubectl apply -f - -n kube-system
+```{{execute}}
+
+This does the same for an the appcred named `enforcerd` in the
+current apoctl namespace with the role `enforcer`.
+
+You can interact with your appcreds with apoctl. For example:
+
+```
+apoctl appcreds list
 ```{{execute}}
