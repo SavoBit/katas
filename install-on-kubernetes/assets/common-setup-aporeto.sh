@@ -19,4 +19,8 @@ chmod +x /usr/local/bin/apoctl
 echo "> Starting Kubernetes"
 launch.sh > /dev/null &
 
-echo "Now, please type '/opt/common-setup.sh && source ~/.aporeto' to update the Katacoda environment."
+echo
+echo "Now, to update the Katacoda environment, please type:"
+echo
+echo "  /opt/common-setup.sh && source ~/.aporeto"
+echo
