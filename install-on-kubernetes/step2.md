@@ -1,10 +1,12 @@
-App Credentials (appcreds) are JSON files containing a x509 certificate
+App Credentials (appcreds) are JSON files that contain a negociated
+x509 certificate used for authentication
 as well as more information about the control plane.
 
-> Lear more about [App Credentials](https://junon.console.aporeto.com/docs/main/references/appcredentials/).
+> Learn more about [App Credentials](https://junon.console.aporeto.com/docs/main/references/appcredentials/).
 
-We need to create some App Credentials for
-enforcerd and aporeto-operator.
+We need to create an one appcred for
+[enforcerd](https://junon.console.aporeto.com/docs/main/concepts/enforcerd-and-processing-units/)
+and one for [aporeto-operator](https://junon.console.aporeto.com/docs/main/installation/install-on-kubernetes/).
 
 For aporeto-operator:
 
