@@ -33,7 +33,7 @@ create_ns_if_needed () {
 }
 
 ## checks
-[[ ! -f "/etc/APORETO_RELEASE" ]] && echo "Init job is still running. Please retry in a few seconds." && exit 1
+[ -f "/etc/APORETO_RELEASE" ] && echo "Init job is still running. Please retry in a few seconds." && exit 1
 
 ## user input
 echo "Aporeto Katacoda Session Configuration"
