@@ -20,7 +20,7 @@ This creates the appcred named `aporeto-operator` in the
 current apoctl namespace with the role `aporeto-operator` and
 prints the output as a
 [Kubernetes Secret Definition](https://kubernetes.io/docs/concepts/configuration/secret/).
-The output is then piped to `kubectl` to apply it in the namespace `kube-system`.
+The output is then piped to `kubectl` to apply it in the Kubernetes namespace `kube-system`.
 
 For enforcerd:
 

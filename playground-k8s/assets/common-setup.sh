@@ -80,5 +80,6 @@ export APOCTL_NAMESPACE=$session_namespace
 export APOCTL_TOKEN=$APOCTL_TOKEN
 export APOCTL_API=$DEFAULT_API_URL
 
+alias nslink="echo \"\$DEFAULT_CLAD_URL/?namespace=\$APOCTL_NAMESPACE\""
 source /opt/post-setup.sh
 EOF
