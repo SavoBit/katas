@@ -17,7 +17,7 @@ chmod +x /usr/local/bin/apoctl
 
 # start k8s
 echo "> Starting Kubernetes"
-launch.sh > /dev/null &
+launch.sh &
 
 echo
 echo "Now, to update the Katacoda environment, please type:"
