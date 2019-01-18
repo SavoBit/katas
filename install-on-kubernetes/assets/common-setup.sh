@@ -7,7 +7,7 @@ clear
 
 DEFAULT_CLAD_URL="https://console.aporeto.com"
 DEFAULT_API_URL="https://api.console.aporeto.com"
-DEFAULT_HELM_REPO_URL="https://charts.aporeto.com/_unstable/clients"
+DEFAULT_HELM_REPO_URL="https://charts.aporeto.com/clients"
 
 KATACODA_NS_PREFIX="_training"
 KATACODA_SESSION_ID="$(uuidgen)"
