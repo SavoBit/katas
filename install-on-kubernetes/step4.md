@@ -13,3 +13,9 @@ Then we deploy the demo app:
 ```
 helm install https://aporeto-inc.github.io/appblock/3tiers-app/3tiers-app-1.0.0.tgz
 ```{{execute}}
+
+You can get the public port of the app ui whith:
+
+```
+k get services ui -o json | jq -r .spec.ports[0].nodePort
+```{{execute}}
