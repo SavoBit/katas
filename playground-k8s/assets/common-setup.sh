@@ -34,7 +34,7 @@ create_ns_if_needed () {
 
 ## user input
 echo "Aporeto Katacoda Session Configuration"
-echo "release-$(cat /etc/APORETO_RELEASE)"
+echo "release $(cat /etc/APORETO_RELEASE)"
 echo
 echo "This script configures the Katacoda environment"
 echo "to make it point to a temporay namespace in"
