@@ -28,8 +28,7 @@ apoctl appcred create enforcerd \
   --type k8s | kubectl apply -f - -n kube-system
 ```{{execute}}
 
-This does the same for an the appcred named `enforcerd` in the
-current apoctl namespace with the role `enforcer`.
+This does the same for an the appcred named `enforcerd` with the role `enforcer`.
 
 You can interact with your appcreds with apoctl. For example:
 
