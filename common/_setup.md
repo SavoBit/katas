@@ -1,6 +1,8 @@
 <!-- do not edit outside of /common-->
 
-**Important:** You must setup the environment by clicking on:
+**Important:** You must setup the environment before continuing.
+
+Please click and **wait** for the following command to complete before continuing.
 
 `/opt/common-setup.sh && source ~/.aporeto`{{execute}}
 
