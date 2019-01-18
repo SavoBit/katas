@@ -19,3 +19,7 @@ You can get the public port of the app ui whith:
 ```
 k get services ui -o json | jq -r .spec.ports[0].nodePort
 ```{{execute}}
+
+You can then access the UI by clicking on the little `+` button at the top
+of the terminal then choose `Select port to view on Host 1` and enter the
+port given by the previous command.
