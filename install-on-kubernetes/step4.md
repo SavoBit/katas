@@ -4,7 +4,7 @@ First we deploy the related policies:
 
 ```
 apoctl api import \
-  --namespace -n $APOCTL_NAMESPACE/default \
+  --namespace $APOCTL_NAMESPACE/default \
   --url https://aporeto-inc.github.io/appblock/3tiers-app/aporeto-import.yaml
 ```{{execute}}
 
