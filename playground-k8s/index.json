@@ -31,6 +31,11 @@
             "chmod": "+x"
           },
           {
+            "file": "common-switch-release.sh",
+            "target": "/opt/",
+            "chmod": "+x"
+          },
+          {
             "file": "post-setup.sh",
             "target": "/opt/",
             "chmod": "+x"
