@@ -3,7 +3,9 @@ Now we can install a demo app.
 First we deploy the related policies:
 
 ```
-apoctl api import --url https://aporeto-inc.github.io/appblock/3tiers-app/aporeto-import.yaml
+apoctl api import \
+  --namespace -n $APOCTL_NAMESPACE/default \
+  --url https://aporeto-inc.github.io/appblock/3tiers-app/aporeto-import.yaml
 ```{{execute}}
 
 Then we deploy the demo app:
