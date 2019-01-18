@@ -8,7 +8,7 @@ DEFAULT_RELEASE="3.5.0-r5"
 marked_release=$(cat /etc/APORETO_RELEASE)
 APORETO_RELEASE=${marked_release:-$DEFAULT_RELEASE}
 echo "$APORETO_RELEASE" > /etc/APORETO_RELEASE
-echo "Configuring version $APORETO_RELEASE"
+echo "Switching to $APORETO_RELEASE"
 
 # get apoctl
 echo "> Downloading apoctl"
