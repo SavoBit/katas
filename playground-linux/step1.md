@@ -1,13 +1,16 @@
 Here are some useful commands:
 
-Check workloads status:
+Create an appcred:
 
-```kubectl -n kube-system get pods```{{execute}}
+```
+mkdir -p /var/lib/aporeto
+apoctl appcred create enforcerd \
+  --role @auth:role=enforcer \
+  > /var/lib/aporeto/default.creds
+```{{execute}}
 
-Check enforcerd logs:
+Start enforcerd in your namespace
 
-```kubectl logs -n kube-system -l app=enforcerd```{{execute}}
-
-Check aporeto-operator logs:
-
-```kubectl logs -n kube-system -l app=aporeto-operator```{{execute}}
+```
+enforcerd --squall-namespace $APORETO_NAMESPACE
+```{{execute}}

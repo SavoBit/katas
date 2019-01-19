@@ -9,8 +9,8 @@ DEFAULT_CLAD_URL="https://console.aporeto.com"
 DEFAULT_API_URL="https://api.console.aporeto.com"
 DEFAULT_HELM_REPO_URL="https://charts.aporeto.com/clients"
 
-KATACODA_NS_PREFIX="_training"
-KATACODA_SESSION_ID="$(uuidgen)"
+APORETO_NS_PREFIX="_training"
+APORETO_SESSION_ID="$(uuidgen)"
 
 
 prompt () {
@@ -54,10 +54,10 @@ prompt APORETO_ACCOUNT "Aporeto account name"
 eval "$(apoctl auth aporeto --account "$APORETO_ACCOUNT" --validity 1h -e)"
 
 ## create namespace
-session_namespace="/$APORETO_ACCOUNT/$KATACODA_NS_PREFIX/$KATACODA_SESSION_ID"
-create_ns_if_needed "/$APORETO_ACCOUNT" "$KATACODA_NS_PREFIX"
+session_namespace="/$APORETO_ACCOUNT/$APORETO_NS_PREFIX/$APORETO_SESSION_ID"
+create_ns_if_needed "/$APORETO_ACCOUNT" "$APORETO_NS_PREFIX"
 sleep 1
-create_ns_if_needed "/$APORETO_ACCOUNT/$KATACODA_NS_PREFIX" "$KATACODA_SESSION_ID"
+create_ns_if_needed "/$APORETO_ACCOUNT/$APORETO_NS_PREFIX" "$APORETO_SESSION_ID"
 
 echo
 echo "Katacoda training namespace is ready:"
@@ -73,10 +73,11 @@ export APORETO_RELEASE=$(cat /etc/APORETO_RELEASE)
 export DEFAULT_CLAD_URL=$DEFAULT_CLAD_URL
 export DEFAULT_HELM_REPO_URL=$DEFAULT_HELM_REPO_URL
 
-export KATACODA_NS_PREFIX=$KATACODA_NS_PREFIX
-export KATACODA_SESSION_ID=$KATACODA_SESSION_ID
+export APORETO_SESSION_ID=$APORETO_SESSION_ID
+export APORETO_ACCOUNT=$APORETO_ACCOUNT
+export APORETO_NAMESPACE=$session_namespace
 
-export APOCTL_NAMESPACE=$session_namespace
+export APOCTL_NAMESPACE=$KATACODA_SESSION_NAMESPACE
 export APOCTL_TOKEN=$APOCTL_TOKEN
 export APOCTL_API=$DEFAULT_API_URL
 
