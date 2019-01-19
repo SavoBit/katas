@@ -9,6 +9,11 @@
       "title": "Kubernetes Playground",
       "description": "This is a playground that starts with Aporeto installed on Kubernetes.",
       "id": "playground-k8s"
+    },
+    {
+      "title": "Linux Playground",
+      "description": "This is a playground that starts with a box ready to start enforcerd on Linux.",
+      "id": "playground-linux"
     }
   ]
 }

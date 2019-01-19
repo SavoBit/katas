@@ -1,0 +1,54 @@
+{
+  "details": {
+    "intro": {
+      "courseData": "background.sh"
+    },
+    "steps": [
+      {
+          "title": "Setup Katacoda",
+          "text": "_setup.md"
+      },
+      {
+        "title": "Aporeto Linux Playground",
+        "text": "step1.md"
+      }
+    ],
+    "assets": {
+      "host01": [
+          {
+            "file": "common-setup-aporeto.sh",
+            "target": "/opt/",
+            "chmod": "+x"
+          },
+          {
+            "file": "common-setup.sh",
+            "target": "/opt/",
+            "chmod": "+x"
+          },
+          {
+            "file": "common-deploy-on-k8s.sh",
+            "target": "/opt/",
+            "chmod": "+x"
+          },
+          {
+            "file": "common-switch-release.sh",
+            "target": "/opt/",
+            "chmod": "+x"
+          },
+          {
+            "file": "post-setup.sh",
+            "target": "/opt/",
+            "chmod": "+x"
+          }
+      ]
+    }
+  },
+  "environment": {
+    "hideintro": true,
+    "hidefinish": true,
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes"
+  }
+}

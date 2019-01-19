@@ -21,5 +21,9 @@ package:
 	cp -a ./common/background.sh ./playground-k8s
 	cp -a ./common/_setup.md ./playground-k8s
 
+	cp -a ./common/common-*.sh ./playground-linux/assets
+	cp -a ./common/background.sh ./playground-linux
+	cp -a ./common/_setup.md ./playground-linux
+
 publish: package
 	katacoda push
