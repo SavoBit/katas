@@ -1,4 +1,5 @@
 {
+  "title": "Install Aporeto Enforcerd on Kubernetes",
   "details": {
     "intro": {
       "courseData": "background.sh",
