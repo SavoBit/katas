@@ -26,11 +26,6 @@
             "chmod": "+x"
           },
           {
-            "file": "common-deploy-on-k8s.sh",
-            "target": "/opt/",
-            "chmod": "+x"
-          },
-          {
             "file": "common-switch-release.sh",
             "target": "/opt/",
             "chmod": "+x"
