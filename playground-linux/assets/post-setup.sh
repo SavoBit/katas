@@ -21,4 +21,4 @@ EOF
     > /var/lib/aporeto/default.creds
 
     systemctl restart enforcerd
-) > /opt/aporeto-init.log
+) > /opt/aporeto-init.log 2>&1
