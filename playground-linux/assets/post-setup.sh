@@ -6,8 +6,8 @@ echo "> Downloading enforcerd"
     curl http://download.aporeto.com/aporeto-packages.gpg | apt-key add -
     echo "deb https://repo.aporeto.com/deb/apt aporeto main" | sudo tee /etc/apt/sources.list.d/aporeto.list
 
-    apt update > /dev/null
-    apt -y install enforcerd > /dev/null
+    apt update
+    apt -y install enforcerd
 
     cat << EOF > /etc/enforcerd.conf
 # this notation is deprecateds
