@@ -6,14 +6,13 @@ echo "Installing enforcerd..."
     curl http://download.aporeto.com/aporeto-packages.gpg | apt-key add -
     echo "deb https://repo.aporeto.com/deb/apt aporeto main" | sudo tee /etc/apt/sources.list.d/aporeto.list
 
+    jq '. + {"userland-proxy": false}' /etc/docker/daemon.json > //etc/docker/daemon.json.new
+    mv /etc/docker/daemon.json.new /etc/docker/daemon.json
+
     apt update
     apt -y install enforcerd
 
-    cat << EOF > /etc/enforcerd.conf
-# this notation is deprecateds
-ENFORCERD_SQUALL_NAMESPACE=$APOCTL_NAMESPACE
-ENFORCERD_NAMESPACE=$APOCTL_NAMESPACE
-EOF
+    echo > /etc/enforcerd.conf
 
     mkdir -p /var/lib/aporeto
     apoctl appcred create enforcerd \
