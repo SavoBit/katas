@@ -13,7 +13,7 @@
     {
       "title": "Ubuntu Playground",
       "description": "This is a playground that starts with Aporeto installed as a systemd unit.",
-      "id": "playground-k8s"
+      "id": "playground-linux"
     }
   ]
 }
