@@ -13,10 +13,4 @@ Please click on the following command then **wait** for it to complete.
 > If you don't have one, visit <https://console.aporeto.com/register>.
 >
 > This training session will create the namespace `/{account}/_training/{session-id}`.
->
-> You have the following tools:
->
-> * `apoctl`: aporeto control plane cli
-> * `tg`: certificate generation tool
-> * `k` alias to `kubectl`
-> * `ks` alias to `kubectl -n kube-system`
+> You can print the link at any time by running `nslinl`{{execute}}.
