@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "> Downloading enforcerd"
+echo "Installing enforcerd..."
 
 (
     curl http://download.aporeto.com/aporeto-packages.gpg | apt-key add -
@@ -22,3 +22,5 @@ EOF
 
     systemctl restart enforcerd
 ) > /opt/aporeto-init.log 2>&1
+
+echo "* enforcerd: OK"
