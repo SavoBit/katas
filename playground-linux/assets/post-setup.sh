@@ -19,7 +19,10 @@ echo "Installing enforcerd..."
     --role @auth:role=enforcer \
     > /var/lib/aporeto/default.creds
 
+    systemctl restart docker
+    sleep 5
     systemctl restart enforcerd
+
 ) > /opt/aporeto-init.log 2>&1
 
 echo "* enforcerd: OK"
