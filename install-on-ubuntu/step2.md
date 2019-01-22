@@ -1,24 +1,11 @@
-We will now install enforcerd.
+App Credentials (appcreds) are JSON files that contain a negociated
+x509 certificate used for authentication
+as well as more information about the control plane.
 
-First, we need to add add Aporeto GPG key to verify the package signature:
+> Learn more about [App Credentials](https://junon.console.aporeto.com/docs/main/references/appcredentials/).
 
-```
-curl -sSL http://download.aporeto.com/aporeto-packages.gpg | apt-key add -
-```{{execute}}
-
-Then we need to add Aporeto Packages Repository to our apt sources:
-
-```
-echo "deb https://repo.aporeto.com/ubuntu/$(lsb_release -cs) aporeto main" > /etc/apt/sources.list.d/aporeto.list
-```{{execute}}
-
-Then we can install enforcerd:
-
-```
-apt update && apt -y install enforcerd
-```{{execute}}
-
-We can now create an appcred for our enforcerd:
+We need to create an one appcred for
+[enforcerd](https://junon.console.aporeto.com/docs/main/concepts/enforcerd-and-processing-units/)
 
 ```
 mkdir -p /var/lib/aporeto
@@ -27,8 +14,5 @@ apoctl appcred create enforcerd \
     > /var/lib/aporeto/default.creds
 ```{{execute}}
 
-And finally restart enforcerd:
-
-```
-systemctl restart enforcerd
-```{{execute}}
+This creates an appcred and places it in `/var/lib/aporeto/default.creds`, which
+is the default place enforcerd will look at.

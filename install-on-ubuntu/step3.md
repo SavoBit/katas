@@ -1,36 +1,25 @@
-To test this installation, we will:
+We will now install enforcerd.
 
-* install a network policy
-* start 2 containers
-* make a curl between them
-
-First thing is to create a Network Access Policy in Aporeto:
+We need to add add Aporeto GPG key to verify the package signature:
 
 ```
-apoctl api create netpol \
-  -k name allow-centos-to-nginx \
-  -k subject '[["$name=centos"]]' \
-  -k object '[["$name=nginx"]]' \
-  -k action Allow
+curl -sSL http://download.aporeto.com/aporeto-packages.gpg | apt-key add -
 ```{{execute}}
 
-Then we start an nginx container:
+We also need to add Aporeto Packages Repository to our apt sources:
 
 ```
-docker run -d --rm --name nginx nginx
+echo "deb https://repo.aporeto.com/ubuntu/$(lsb_release -cs) aporeto main" > /etc/apt/sources.list.d/aporeto.list
 ```{{execute}}
 
-We start an centos container:
+Then we can install enforcerd:
 
 ```
-docker run -it -d --rm --name centos centos
+apt update && apt -y install enforcerd
 ```{{execute}}
 
-And we make a curl from centos to nginx:
+You can check enforcerd is running with the following command:
 
 ```
-docker exec -it centos curl "$(docker inspect nginx | jq -r '.[0].NetworkSettings.Networks.bridge.IPAddress')"
+systemctl status enforcerd
 ```{{execute}}
-
-You can check now check in your training namespace that the
-communication has been reported and allowed.

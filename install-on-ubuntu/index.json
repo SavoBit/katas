@@ -15,8 +15,12 @@
         "text": "step1.md"
       },
       {
-        "title": "Install Enforcerd",
+        "title": "Retrieve an Application Credential",
         "text": "step2.md"
+      },
+      {
+        "title": "Install Enforcerd",
+        "text": "step3.md"
       },
       {
         "title": "Test the installation",
