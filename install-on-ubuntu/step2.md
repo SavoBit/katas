@@ -3,13 +3,13 @@ We will now install enforcerd.
 First, we need to add add Aporeto GPG key to verify the package signature:
 
 ```
-curl http://download.aporeto.com/aporeto-packages.gpg | apt-key add -
+curl -sSL http://download.aporeto.com/aporeto-packages.gpg | apt-key add -
 ```{{execute}}
 
 Then we need to add Aporeto Packages Repository to our apt sources:
 
 ```
-echo "deb https://repo.aporeto.com/ubuntu/16 aporeto main" > /etc/apt/sources.list.d/aporeto.list
+echo "deb https://repo.aporeto.com/ubuntu/$(lsb_release -cs) aporeto main" > /etc/apt/sources.list.d/aporeto.list
 ```{{execute}}
 
 Then we can install enforcerd:
