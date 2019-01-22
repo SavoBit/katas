@@ -31,3 +31,6 @@ And we make a curl from centos to nginx:
 ```
 docker exec -it centos curl "$(docker inspect nginx | jq -r '.[0].NetworkSettings.Networks.bridge.IPAddress')"
 ```{{execute}}
+
+You can check now check in your training namespace that the
+communication has been reported and allowed.
