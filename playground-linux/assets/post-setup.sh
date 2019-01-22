@@ -8,20 +8,15 @@ echo "Installing enforcerd..."
 
     jq '. + {"userland-proxy": false}' /etc/docker/daemon.json > /etc/docker/daemon.json.new
     mv /etc/docker/daemon.json.new /etc/docker/daemon.json
+    systemctl restart docker
 
-    apt update
-    apt -y install enforcerd
-
-    echo > /etc/enforcerd.conf
 
     mkdir -p /var/lib/aporeto
     apoctl appcred create enforcerd \
     --role @auth:role=enforcer \
     > /var/lib/aporeto/default.creds
 
-    systemctl restart docker
-    sleep 5
-    systemctl restart enforcerd
+    apt update && apt -y install enforcerd
 
 ) > /opt/aporeto-init.log 2>&1
 
