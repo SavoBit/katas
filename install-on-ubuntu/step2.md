@@ -9,7 +9,7 @@ curl http://download.aporeto.com/aporeto-packages.gpg | apt-key add -
 Then we need to add Aporeto Packages Repository to our apt sources:
 
 ```
-echo "deb https://repo.aporeto.com/deb/apt aporeto main" > /etc/apt/sources.list.d/aporeto.list
+echo "deb https://repo.aporeto.com/ubuntu/16 aporeto main" > /etc/apt/sources.list.d/aporeto.list
 ```{{execute}}
 
 Then we can install enforcerd:
