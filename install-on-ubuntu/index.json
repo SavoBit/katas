@@ -2,7 +2,8 @@
   "title": "Install Enforcerd on Ubuntu",
   "details": {
     "intro": {
-      "courseData": "background.sh"
+      "courseData": "background.sh",
+      "text": "intro.md"
     },
     "steps": [
       {
@@ -10,8 +11,12 @@
           "text": "_setup.md"
       },
       {
-        "title": "Aporeto Linux Playground",
+        "title": "Prepare Docker",
         "text": "step1.md"
+      },
+      {
+        "title": "Install Enforcerd",
+        "text": "step2.md"
       }
     ],
     "assets": {
