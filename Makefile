@@ -17,6 +17,10 @@ package:
 	cp -a ./common/background.sh ./install-on-kubernetes
 	cp -a ./common/_setup.md ./install-on-kubernetes
 
+	cp -a ./common/common-*.sh ./install-on-ubuntu/assets
+	cp -a ./common/background.sh ./install-on-ubuntu
+	cp -a ./common/_setup.md ./install-on-ubuntu
+
 	cp -a ./common/common-*.sh ./playground-k8s/assets
 	cp -a ./common/background.sh ./playground-k8s
 	cp -a ./common/_setup.md ./playground-k8s
