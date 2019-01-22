@@ -1,9 +1,14 @@
 {
   "scenarios": [
     {
-      "title": "Install Aporeto Enforcerd on Kubernetes",
+      "title": "Install Enforcerd on Kubernetes",
       "description": "Learn how to install Aporeto on a Kubernetes cluster.",
       "id": "install-on-kubernetes"
+    },
+    {
+      "title": "Install Enforcerd on Ubuntu",
+      "description": "Learn how to install Aporeto as a systemd unit on Ubuntu.",
+      "id": "install-on-ubuntu"
     },
     {
       "title": "Kubernetes Playground",

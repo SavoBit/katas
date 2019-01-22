@@ -1,5 +1,5 @@
 {
-  "title": "Ubuntu Playground",
+  "title": "Install Enforcerd on Ubuntu",
   "details": {
     "intro": {
       "courseData": "background.sh"
@@ -30,17 +30,11 @@
             "file": "common-switch-release.sh",
             "target": "/opt/",
             "chmod": "+x"
-          },
-          {
-            "file": "post-setup.sh",
-            "target": "/opt/",
-            "chmod": "+x"
           }
       ]
     }
   },
   "environment": {
-    "hideintro": true,
     "hidefinish": true,
     "uilayout": "terminal"
   },

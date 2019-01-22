@@ -82,5 +82,5 @@ export APOCTL_TOKEN=$APOCTL_TOKEN
 export APOCTL_API=$DEFAULT_API_URL
 
 alias nslink="echo \"\$DEFAULT_CLAD_URL/?namespace=\$APOCTL_NAMESPACE\""
-[ -f /opt/post-setup.sh ] && source /opt/post-setup.sh
+source /opt/post-setup.sh
 EOF

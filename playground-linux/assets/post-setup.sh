@@ -6,7 +6,7 @@ echo "Installing enforcerd..."
     curl http://download.aporeto.com/aporeto-packages.gpg | apt-key add -
     echo "deb https://repo.aporeto.com/deb/apt aporeto main" | sudo tee /etc/apt/sources.list.d/aporeto.list
 
-    jq '. + {"userland-proxy": false}' /etc/docker/daemon.json > //etc/docker/daemon.json.new
+    jq '. + {"userland-proxy": false}' /etc/docker/daemon.json > /etc/docker/daemon.json.new
     mv /etc/docker/daemon.json.new /etc/docker/daemon.json
 
     apt update
