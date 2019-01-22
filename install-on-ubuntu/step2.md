@@ -1,18 +1,22 @@
 We will now install enforcerd.
 
-
-First, we need to add the Aporeto Package repository:
+First, we need to add add Aporeto GPG key to verify the package signature:
 
 ```
 curl http://download.aporeto.com/aporeto-packages.gpg | apt-key add -
-echo "deb https://repo.aporeto.com/deb/apt aporeto main" | sudo tee /etc/apt/sources.list.d/aporeto.list
 ```{{execute}}
+
+Then we need to add Aporeto Packages Repository to our apt sources:
+
+```
+echo "deb https://repo.aporeto.com/deb/apt aporeto main" > /etc/apt/sources.list.d/aporeto.list
+```{{execute}}
+
 
 Then we can install enforcerd:
 
 ```
-apt update
-apt -y install enforcerd
+apt update && apt -y install enforcerd
 ```{{execute}}
 
 We can now create an appcred for our enforcerd:
