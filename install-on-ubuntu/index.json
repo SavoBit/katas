@@ -2,7 +2,7 @@
   "title": "Install Enforcerd on Ubuntu",
   "details": {
     "intro": {
-      "courseData": "background.sh",
+      "code": "background.sh",
       "text": "intro.md"
     },
     "steps": [
