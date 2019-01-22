@@ -12,7 +12,6 @@ Then we need to add Aporeto Packages Repository to our apt sources:
 echo "deb https://repo.aporeto.com/deb/apt aporeto main" > /etc/apt/sources.list.d/aporeto.list
 ```{{execute}}
 
-
 Then we can install enforcerd:
 
 ```
