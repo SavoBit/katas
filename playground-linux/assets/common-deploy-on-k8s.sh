@@ -26,9 +26,15 @@ apoctl appcred create enforcerd \
   --type k8s | kubectl apply -f - -n kube-system > /dev/null || exit 1
 echo "* enforcerd appcreds: OK"
 
+kubectl create namespace aporeto
+
+helm install \
+    --name aporeto-crds\
+    aporeto/aporeto-crds
+
 helm install \
     --name aporeto-operator \
-    --namespace kube-system \
+    --namespace aporeto \
     aporeto/aporeto-operator > /dev/null || exit 1
 echo "* aporeto-operator deployed: OK"
 
@@ -36,6 +42,6 @@ echo "* aporeto-operator deployed: OK"
 
 helm install \
     --name enforcerd \
-    --namespace kube-system \
+    --namespace aporeto \
     aporeto/enforcerd > /dev/null || exit 1
 echo "* enforcerd deployed: OK"
