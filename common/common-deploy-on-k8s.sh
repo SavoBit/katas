@@ -18,7 +18,6 @@ echo
 echo "Deploying Aporeto..."
 kubectl create namespace aporeto
 
-
 apoctl appcred create aporeto-operator \
   --role @auth:role=aporeto-operator \
   --type k8s | kubectl apply -f - -n aporeto > /dev/null || exit 1
