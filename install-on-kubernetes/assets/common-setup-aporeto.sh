@@ -3,7 +3,7 @@
 # DO NOT EDIT OUTSIDE OD /common folder
 
 # Set the aporeto release here. That's all.
-DEFAULT_RELEASE="release-3.7.0-r1"
+DEFAULT_RELEASE="release-3.9.1"
 
 marked_release=$(cat /etc/APORETO_RELEASE)
 APORETO_RELEASE=${marked_release:-$DEFAULT_RELEASE}
