@@ -1,7 +1,7 @@
 #!/bin/bash
 # shellcheck disable=SC1090
 
-# DO NOT EDIT OUTSIDE OD /common folder
+# DO NOT EDIT OUTSIDE OF /common folder
 
 clear
 
