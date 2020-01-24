@@ -17,6 +17,7 @@ echo "Installing enforcerd..."
     > /var/lib/aporeto/default.creds
 
     apt update && apt -y install enforcerd
+    systemctl start enforcerd
 
 ) > /opt/aporeto-init.log 2>&1
 
