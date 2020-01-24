@@ -18,6 +18,12 @@ Then we can install enforcerd:
 apt update && apt -y install enforcerd
 ```{{execute}}
 
+Finally start enforcerd:
+
+```
+systemct start enforcerd
+```{{execute}}
+
 You can check enforcerd is running with the following command:
 
 ```
