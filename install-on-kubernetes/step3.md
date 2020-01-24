@@ -16,9 +16,16 @@ Then install aporeto-operator:
 ```
 helm install \
     --name aporeto-operator \
-    --namespace aporeto \
+    --namespace aporeto-operator \
     aporeto/aporeto-operator
 ```{{execute}}
+
+To verify the status of the aporeto-operator:
+
+```
+kubectl get pods -n aporeto-operator
+```{{execute}}
+
 
 Finally, deploy enforcerd:
 
@@ -32,5 +39,5 @@ helm install \
 To verify the status of the protection workload:
 
 ```
-kubectl get pods -l type=aporeto -n aporeto
+kubectl get pods -n aporeto
 ```{{execute}}
