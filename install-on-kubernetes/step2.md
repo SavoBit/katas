@@ -2,15 +2,16 @@ App Credentials (appcreds) are JSON files that contain a negociated
 x509 certificate used for authentication
 as well as more information about the control plane.
 
-> Learn more about [App Credentials](https://junon.console.aporeto.com/docs/main/references/appcredentials/).
+> Learn more about [App Credentials](https://docs.aporeto.com/saas/reference/resources/app-cred/).
 
 We need to create an one appcred for
-[enforcerd](https://junon.console.aporeto.com/docs/main/concepts/enforcerd-and-processing-units/)
-and one for [aporeto-operator](https://junon.console.aporeto.com/docs/main/installation/install-on-kubernetes/).
+[enforcerd](https://docs.aporeto.com/saas/concepts/#enforcer)
+and one for [aporeto-operator](https://docs.aporeto.com/saas/start/enforcer/k8s/).
 As we are going to deploy both enforcerd and aporeto-operator in the Kubernetes namespaces `aporeto` and `aporeto-operator`, we must first create these namespaces:
 
 ```
-kubectl create namespace aporeto aporeto-operator
+kubectl create namespace aporeto
+kubectl create namespace aporeto-operator
 ```{{execute}}
 
 Then create the appcreds for aporeto-operator:
@@ -22,7 +23,7 @@ apoctl appcred create aporeto-operator \
 ```{{execute}}
 
 This creates the appcred named `aporeto-operator` in the
-current apoctl namespace with the role `aporeto-operator` and
+aporeto-operator namespace with the role `aporeto-operator` and
 prints the output as a
 [Kubernetes Secret Definition](https://kubernetes.io/docs/concepts/configuration/secret/).
 The output is then piped to `kubectl` to apply it in the Kubernetes namespace `aporeto-operator`.

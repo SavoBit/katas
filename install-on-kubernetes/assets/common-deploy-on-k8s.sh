@@ -17,10 +17,11 @@ echo "* helm: OK"
 echo
 echo "Deploying Aporeto..."
 kubectl create namespace aporeto
+kubectl create namespace aporeto-operator
 
 apoctl appcred create aporeto-operator \
   --role @auth:role=aporeto-operator \
-  --type k8s | kubectl apply -f - -n aporeto > /dev/null || exit 1
+  --type k8s | kubectl apply -f - -n aporeto-operator > /dev/null || exit 1
 echo "* aporeto-operator appcreds: OK"
 
 apoctl appcred create enforcerd \
@@ -34,7 +35,7 @@ helm install \
 
 helm install \
     --name aporeto-operator \
-    --namespace aporeto \
+    --namespace aporeto-operator \
     aporeto/aporeto-operator > /dev/null || exit 1
 echo "* aporeto-operator deployed: OK"
 
