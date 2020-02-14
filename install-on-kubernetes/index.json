@@ -12,6 +12,10 @@
           "text": "_setup.md"
       },
       {
+        "title": "Create an Enforcer Profile",
+        "text": "step1.md"
+      },
+      {
         "title": "Deploy App Credentials",
         "text": "step2.md"
       },
