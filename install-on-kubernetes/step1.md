@@ -27,4 +27,4 @@ data:
     subject:
     - - $identity=enforcer
 EOF
-```
+```{{execute}}
